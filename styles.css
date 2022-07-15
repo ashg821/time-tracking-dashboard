@@ -40,7 +40,7 @@ body {
 
 #container {
     width: 80vw;
-    height: 64vh;
+    height: 50vh;
     margin: 18vh auto;
     display: flex;
     flex-flow: row wrap;
