@@ -1,0 +1,221 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+
+:root {
+    /* Primary */
+
+    --blue: hsl(246, 80%, 60%);
+    --lightRed1: hsl(15, 100%, 70%);
+    /* work  */
+    --softBlue: hsl(195, 74%, 62%);
+    /* play  */
+    --lightRed2: hsl(348, 100%, 68%);
+    /* study  */
+    --limeGreen: hsl(145, 58%, 55%);
+    /* exercise  */
+    --violet: hsl(264, 64%, 52%);
+    /* social  */
+    --softOrange: hsl(43, 84%, 65%);
+    /* self care  */
+
+    /* Neutral */
+
+    --veryDarkBlue: hsl(226, 43%, 10%);
+    --darkBlue: hsl(235, 46%, 20%);
+    --desaturatedBlue: hsl(235, 45%, 61%);
+    --paleBlue: hsl(236, 100%, 87%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Rubik', sans-serif;
+    font-size: 18px;
+    background-color: var(--veryDarkBlue);
+    color: white;
+}
+
+#container {
+    width: 80vw;
+    height: 64vh;
+    margin: 18vh auto;
+    display: flex;
+    flex-flow: row wrap;
+}
+
+#profile {
+    width: 250px;
+    height: 100%;
+    background-color: var(--darkBlue);
+    border-radius: 10px;
+}
+
+#profileContainer {
+    background-color: var(--blue);
+    padding: 25px 0 0 25px;
+    height: 65%;
+    border-radius: 10px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+#profilePhoto {
+    border: 2px solid white;
+    border-radius: 50%;
+    margin-bottom: 30px;
+}
+
+#profileText {
+    font-size: 14px;
+    font-weight: 300;
+    color: var(--paleBlue);
+}
+
+#profileName {
+    font-size: 42px;
+    font-weight: lighter;
+}
+
+#linkContainer {
+    height: 33%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 10px 0;
+}
+
+.link {
+    margin-left: 25px;
+    color: var(--desaturatedBlue);
+    cursor: pointer;
+}
+
+.link:hover {
+    color: white;
+}
+
+#category {
+    width: 75%;
+    height: 100%;
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.card {
+    height: 48%;
+    width: 30.8%;
+    background-color: var(--lightRed1);
+    margin: 0 0 20px 20px;
+    overflow: hidden;
+    border-radius: 10px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.cardIcon {
+    position: relative;
+    left: 70%;
+    bottom: 3%;
+}
+
+.cardDetail {
+    padding: 20px 25px 0 25px;
+    background-color: var(--darkBlue);
+    height: 85%;
+    margin-top: -20px;
+    z-index: 5;
+    border-radius: inherit;
+    box-shadow: 0px 0px 0px 1px  black;  
+    /* transform: translateZ(0px); */
+    cursor: pointer;
+}
+
+.cardDetail:hover{
+    filter: brightness(140%);
+}
+
+.titleHolder {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.ellipseImage {
+    position: absolute;
+    top: 45%;
+    right: 0;
+    cursor: pointer;
+}
+
+.currentTime {
+    font-size: 60px;
+    margin-bottom: 13px;
+    font-weight: 300;
+}   
+
+.previousTime {
+    font-size: 14px;
+    color: var(--paleBlue);
+}
+
+@media screen and (max-width: 1314px){
+    #container {
+        width: 90vw;
+        height: 70vh;
+        padding-bottom: 10px;
+    }
+
+    #profile {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+    }
+
+    #profileContainer{
+        flex-direction: row;
+        height: 140px;
+    }
+
+    #profileTextContainer{
+        margin-left: 20px;
+        padding-top: 10px;
+    }
+
+    #profileName{
+        font-size: 30px;
+    }
+
+    #linkContainer {
+        height: auto;
+        flex-direction: row;
+        justify-content: space-around;
+        padding: 20px 0;
+
+    }
+
+    #category {
+        width: 100%;
+        height: auto;
+        margin-top: 20px;
+        flex-flow: column nowrap;
+        padding-bottom: 10vh;
+    }
+    
+    .card {
+        height: auto;
+        width: 100%;
+        margin: 0 0 20px 0;
+    }
+
+    .timeContainer{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 20px ;
+    }
+}
