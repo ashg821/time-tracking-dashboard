@@ -41,7 +41,8 @@ body {
 #container {
     width: 80vw;
     height: 50vh;
-    margin: 18vh auto;
+    min-height: 490px;
+    margin: 25vh auto;
     display: flex;
     flex-flow: row wrap;
 }
@@ -95,7 +96,7 @@ body {
 }
 
 .link:hover {
-    color: white;
+    color: white !important;
 }
 
 #category {
